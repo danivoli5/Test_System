@@ -1,5 +1,4 @@
 #pragma once
-#include"course.h"
 #include<string>
 #include<vector>
 #include<iostream>
@@ -9,7 +8,7 @@ using namespace std;
 class Details
 {
 protected:
-	string name,semester, lecturer, subjects, due;
+	string name, semester, lecturer, subjects, due;
 	int year, difficulty;
 	vector <Details> all;
 public:
@@ -25,4 +24,3 @@ public:
 	void openInfo(string name, string semester, string lecturer, string subjects, int year, int difficulty, string due);
 	~Details();
 };
-
