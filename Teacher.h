@@ -12,7 +12,7 @@ protected:
 	string name, sub;
 	vector <Teacher> professors;
 public:
-	long getPhone(); 
+	long getPhone();
 	long getPass();
 	string getName();
 	string getSub();
