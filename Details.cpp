@@ -3,7 +3,6 @@
 #include "Details.h"
 #include <string>
 #include <iostream>
-#include"course.h"
 #include<fstream>
 #include<Windows.h>
 using namespace std;
@@ -37,7 +36,7 @@ string Details::getSubjects()
 
 void Details::openInfo(string name, string semester, string lecturer, string subjects, int year, int difficulty, string due)
 {
-	string temp = name + '_' + to_string(year) + '_' + semester + '_' + due + '_' + lecturer + '_' + subjects + '_' + to_string(difficulty) + ".docx";
+	string temp = name + ' ' + to_string(year) + ' ' + semester + ' ' + due + ' ' + lecturer + ' ' + subjects + ' ' + to_string(difficulty) + ' ' + ".docx";	
 	system(temp.c_str());
 	system("pause");
 }
@@ -47,16 +46,15 @@ Details::~Details()
 {
 }
 
-
 Details::Details()
 {
 }
 
-Details::Details(string name2, string semester2, string lecturer2, string subjects2, int year2, int difficulty2,string due2)
-	: name(name2),semester(semester2), lecturer(lecturer2), subjects(subjects2), year(year2), difficulty(difficulty2),due(due2)
+Details::Details(string name2, string semester2, string lecturer2, string subjects2, int year2, int difficulty2, string due2)
+	: name(name2), semester(semester2), lecturer(lecturer2), subjects(subjects2), year(year2), difficulty(difficulty2), due(due2)
 {
 	string data;
-	string temp = name2+'_'+ to_string(year2) + '_' + semester2 + '_' + due2 + '_' + lecturer2 + '_' + subjects2 + '_' + to_string(difficulty2)+".docx";
+	string temp = name2 + ' ' + to_string(year2) + ' ' + semester2 + ' ' + due2 + ' ' + lecturer2 + ' ' + subjects2 + ' ' + to_string(difficulty2) + ".docx";
 	ofstream file1;
 	file1.open(temp);
 	file1.close();
